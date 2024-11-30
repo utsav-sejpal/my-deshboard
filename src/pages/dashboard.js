@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addTask, updateTask, deleteTask, setTasksFromLocalStorage } from '../redux/taskslice';
 import TaskForm from '../components/taskform';
 import TaskList from '../components/tasklists';
+import "../utils/dashboard.css"
 
 const Dashboard = () => {
   const dispatch = useDispatch();
@@ -25,7 +26,7 @@ const Dashboard = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className='main1'>
       <h1>Dashboard</h1>
       <TaskForm />
       <TaskList tasks={tasks} />
